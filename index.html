@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course homepage where my other projects for the term can easily be accessed">
+    <meta name="author" content="Ikechukwu Great">
+    <link rel="stylesheet" href="styles/style_small.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Course Home Page</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Ikechukwu Great</span>
+        </div>
+
+        <!-- Bug 12 fixed: aria-expanded starts as false (nav is hidden by default) -->
+        <button class="hambugger-icon" id="nav-btn" aria-expanded="false"></button>
+
+        <!-- Bug 1 fixed: added closing </nav> tag -->
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <h1 class="heading">HOME</h1>
+
+        <section class="about-me-section">
+            <h2>About Me</h2>
+            <p>
+                My name is Ikechukwu Great. I am a student of BYU-Idaho via BYU Pathway Worldwide. I am currently
+                studying software engineering and aspiring to solve real-world problems by creating programs and
+                digital solutions for companies, brands, and individuals. I am from Nigeria and currently
+                reside in Lagos, Nigeria.
+            </p>
+        </section>
+
+        <section class="image-section">
+            <h2>Student Photo</h2>
+            <img src="Images/myimage.jpg" alt="Photo of Ikechukwu Great">
+        </section>
+
+        <section class="web-certificate-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="course-container">
+                <!-- Bug 3 fixed: changed <p> to <div> for non-paragraph interactive elements -->
+                <div class="courses">All</div>
+                <div class="courses">WDD</div>
+                <div class="courses">CSE</div>
+                <div class="courses">WDD 130</div>
+                <div class="courses">WDD 131</div>
+                <div class="courses">WDD 231</div>
+            </div>
+            <p class="point">The total credit for the courses listed above is 6</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="socialmedi-container">
+            <!-- Bug 2 fixed: anchor tags now wrap the icons, not nested inside them -->
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.behance.net/greatichimere" aria-label="Behance" target="_blank" rel="noopener">
+                <i class="fa-brands fa-square-behance"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ikechukwu-great" aria-label="LinkedIn" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+        <!-- Bug 4 fixed: &copy needs semicolon -->
+        <p>Copyright &copy; <span id="current-year"></span>, Ikechukwu Great
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+</body>
+</html>

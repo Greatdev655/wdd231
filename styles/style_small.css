@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Bug 5 fixed: corrected typo from --backgound-color to --background-color */
+    --background-color: #180431;
+    --primary-color: #fff;
+    --font-header-color: rgb(5, 160, 0);
+    --primary-font-size: .75rem;
+    --secondary-font-size: 1rem;
+    --primary-header-font-size: 1.5rem;
+    --secondary-header-font-size: 1.8rem;
+    --font-family: "Poppins", sans-serif;
+    --secondary-font-family: sans-serif;
+    --header-color: #06000e;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--primary-color);
+    font-family: var(--font-family);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;           /* allows nav to drop below on small screens */
+    width: 100%;
+    background: var(--header-color);
+    padding: .75rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container i {
+    font-size: var(--secondary-font-size);
+    color: var(--font-header-color);
+    margin-right: 5px;
+}
+
+.logo-container span {
+    font-size: var(--secondary-font-size);
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+
+
+/* ── Hamburger button ── */
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    /* Bug 8 fixed: increased font-size so the icon is actually visible */
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.hambugger-icon::before {
+    content: "\2630";           /* ☰ */
+    color: var(--primary-color);
+}
+
+/* Bug 9 fixed: corrected selector — button.show, not a child element */
+.hambugger-icon.show::before {
+    content: "\00D7";           /* ✕ */
+}
+
+
+/* ── Mobile nav ── */
+
+.navigation {
+    display: none;
+    width: 100%;
+    padding: .75rem;
+    align-items: center;
+}
+
+/* Bug (implicit): .show should display the nav as block */
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-color);
+    width: 100%;
+   
+}
+
+.navigation ul li {
+    list-style: none;
+    border-bottom: 1px solid var(--primary-color);
+    text-align: center;
+    padding: .5rem 0;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.navigation ul li:hover {
+    background: var(--font-header-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.navigation ul li.active {
+    background: var(--font-header-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+/* ── Main ── */
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: .75rem;
+    justify-content: center;
+    /* Bug 7 fixed: center the sections horizontally */
+    align-items: center;
+}
+
+main h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section {
+    width: 90%;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 30px;
+    padding: .75rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Bug 6 fixed: rgba values need commas */
+    box-shadow: 3px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ── About Me ── */
+
+.about-me-section h2 {
+    font-size: var(--primary-header-font-size);
+    color: var(--background-color);
+    font-family: var(--font-family);
+}
+
+.about-me-section p {
+    font-family: var(--secondary-font-family);
+    color: #06000e;
+    font-size: var(--primary-font-size);
+}
+
+
+/* ── Image section ── */
+
+.image-section h2 {
+    font-size: var(--primary-header-font-size);
+    color: var(--background-color);
+    font-family: var(--font-family);
+    margin-bottom: 10px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    /* Bug 6 fixed here too */
+    box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ── Certificate section ── */
+
+.web-certificate-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.web-certificate-section h2 {
+    font-size: 1.2rem;
+    color: var(--background-color);
+    font-family: var(--font-family);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.course-container {
+    display: flex;
+    flex-direction: column;
+    padding: .75rem;
+    width: 100%;
+}
+
+.course-container .courses {
+    background: var(--background-color);
+    padding: .75rem;
+    font-size: var(--primary-font-size);
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    border-radius: 30px;
+    width: 100%;
+    text-align: center;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.course-container .courses:hover {
+    background: transparent;
+    border: 1px solid var(--background-color);
+    color: var(--header-color);
+}
+
+.point {
+    color: var(--header-color);
+    font-family: var(--font-family);
+    font-size: var(--primary-font-size);
+    text-align: center;
+}
+
+
+/* ── Footer ── */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--header-color);
+    padding: .75rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    font-size: var(--primary-font-size);
+    text-align: center;
+}
+
+.socialmedi-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;        /* cleaner spacing than relying on margin */
+    padding: .5rem;
+}
+
+.socialmedi-container a {
+    font-size: 1.2rem;  /* Bug 8 equivalent: icons were too small at .75rem */
+    color: var(--primary-color);
+}
