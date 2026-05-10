@@ -1,0 +1,118 @@
+
+@media (min-width: 768px) {
+
+
+    
+    header {
+        flex-direction: row;    
+        padding: .75rem;
+    }
+
+
+    .logo-container {
+        padding: 0.75rem ;
+    }
+
+   
+    .hambugger-icon {
+        display: none;
+    }
+
+   
+    .navigation {
+        display: flex;             
+        /* background: transparent;        */
+        padding: .5rem;
+        justify-content: space-around;
+    }
+
+    .navigation ul {
+        flex-direction: row;        
+        gap: 0;
+        width: 10%;
+        background: transparent;
+        color: #fff;
+    }
+
+    .navigation ul li {
+        border-bottom: none;
+        margin-right: 5px;
+    }
+
+    .navigation ul li a {
+        display: flex;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        transition: background 0.2s ease;
+    }
+
+    .navigation ul li a:hover,
+    .navigation ul li.active a {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;   /* About Me takes 2/3, Photo takes 1/3 */
+        grid-template-rows: auto auto;
+        gap: .5rem;
+        padding: .75rem;
+        align-items: center;
+        place-items: center;
+        margin-top: 10px;
+    }
+
+    main .heading {
+        display: none;
+    }
+
+    /* About Me — column 1 */
+     .about-me-section {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        height: 100%;               
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        padding: 1rem;   
+    }
+
+   .about-me-section h2 {
+        font-size: var(--primary-header-font-size);
+        color: var(--background-color);
+        font-family: var(--font-family);
+        text-align: center;
+    }
+
+    .about-me-section p {
+        font-size: 1.2rem;
+        color: var(--background-color);
+        font-family: var(--font-family);
+        text-align: justify;
+    }
+
+    /* Student Photo — column 2 */
+    .image-section {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    /* Courses — spans both columns (full width) */
+    .web-certificate-section {
+        grid-column: 1 / 3;    /* stretch across all columns */
+        grid-row: 2 / 3;
+    }
+
+    /* Also make the h1 "HOME" span full width */
+    .heading {
+        grid-column: 1 / 3;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .course-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);   /* 3 equal columns */
+        gap: 0.5rem;
+    }
+
+}

@@ -5,7 +5,7 @@
 }
 
 :root {
-    /* Bug 5 fixed: corrected typo from --backgound-color to --background-color */
+    
     --background-color: #180431;
     --primary-color: #fff;
     --font-header-color: rgb(5, 160, 0);
@@ -25,8 +25,7 @@ body {
 }
 
 header {
-    display: flex;
-    flex-wrap: wrap;           /* allows nav to drop below on small screens */
+    display: flex;         
     width: 100%;
     background: var(--header-color);
     padding: .75rem;
@@ -64,19 +63,17 @@ button {
     background: transparent;
     border: none;
     cursor: pointer;
-    /* Bug 8 fixed: increased font-size so the icon is actually visible */
     font-size: 1.5rem;
     color: var(--primary-color);
 }
 
 .hambugger-icon::before {
-    content: "\2630";           /* ☰ */
+    content: "\2630";         
     color: var(--primary-color);
 }
 
-/* Bug 9 fixed: corrected selector — button.show, not a child element */
 .hambugger-icon.show::before {
-    content: "\00D7";           /* ✕ */
+    content: "\00D7";           
 }
 
 
@@ -89,7 +86,7 @@ button {
     align-items: center;
 }
 
-/* Bug (implicit): .show should display the nav as block */
+
 .navigation.show {
     display: block;
 }
