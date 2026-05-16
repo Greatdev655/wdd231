@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Using APIs to dynamically build a chamber directory web page">
+    <meta name="author" content="Ikechukwu Great">
+    <meta property="og:title" content="Chamber Directory">
+    <meta property="og:description" content="Using APIs to dynamically build a chamber directory web page">
+    <meta property="og:image" content="https://Greatdev655.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://Greatdev655.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/directory.js" defer></script>
+    <title>Chamber Directory</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_container">
+            <img src="images/chamberlogo.webp" alt="Chamber Logo">
+            <h1>Chamber Directory</h1>
+        </div>
+
+        <nav class="navigation">
+            <div class="hamburgger-menu">
+                <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="final.html">Join</a></li>
+                <li><a href="final.html">Discover</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+
+    <main>
+        <section class="members-dir">
+            <h2> Member Directory</h2>
+            <p>Explore businesses that are proud members of the Lagos Chamber of Commerce.</p>
+            <div class="view-toggle-contianer" id="view-controls">
+                <button id="grid-btn" class="active">Grid</button>
+                <button id="list-btn">List</button>
+
+
+            </div>
+
+            <div class="grid" id="directory-container"></div>
+
+
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="footer_contact-info">
+            <p> <span>Name:</span> Lagos Chamber Of Commerce</p>
+            <p> <span>Address:</span> No 10 , Allen avenue , Ikeja Lagos</p>
+            <p><span>Phone Number:</span> +234 912448540</p>
+            <p> <span>Email Address:</span> <a href="mailto:greatiyke7@gmail.com">greatiyke7@gmail.com</a></p>
+        </div>
+
+        <div class="quick-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="final.html">Join</a></li>
+                <li><a href="final.html">Discover</a></li>
+            </ul>
+        </div>
+
+        <div class="legal-info">
+            <p>WDD231 - Ikechukwu Great</p>
+            <p>Copyright &copy; <span id="current-year"></span>, Lagos Chamber Of Commerce
+                <span id="lastModified"></span>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

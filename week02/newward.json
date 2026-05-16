@@ -1,0 +1,28 @@
+{
+    "familyName": "Ikechukwu",
+    "move_in_date": "2025-01-19",
+    "number-of-people":"4",
+    "visited-by-bishopric":"false",
+    "family-members":[
+        {
+            "name":"Ikechukwu Majesty",
+            "gender":"Male",
+            "birthdate":"2005-03-12"
+        },
+        {
+            "name":"Ikechukwu Great",
+            "gender":"Male",
+            "birthdate":"2000-01-12"
+        },
+        {
+            "name":"Ikechukwu Ukemezie",
+            "gender":"Male",
+            "birthdate":"1979-09-12"
+        },
+        {
+            "name":"Ikechukwu Juliet",
+            "gender":"Female",
+            "birthdate":"1981-02-24"
+        }
+    ]
+}
