@@ -1,0 +1,80 @@
+{
+    "members": [
+        {
+            "name": "Dangote Group of company",
+            "address": "abuja, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@dangotegroup.com",
+            "website": "https://www.dangote.com",
+            "image": "dangote.png",
+            "membershipLevel": 1,
+            "description": "The Dangote Group is a Nigerian multinational industrial conglomerate founded by Aliko Dangote. It is the largest conglomerate in West Africa and one of the largest on the African continent. The company operates in various sectors, including cement production, sugar refining, flour milling, salt processing, and more. The Dangote Group has a significant presence in Nigeria and other African countries, contributing to economic growth and development in the region."
+        },
+
+         {
+            "name": "MTN",
+            "address": "Lagos, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@mtn.com",
+            "website": "https://www.mtnonline.com",
+            "image": "MTN.png",
+            "membershipLevel": 1,
+            "description": "MTN is a Nigerian multinational telecommunications company. It is one of the largest mobile network operators in Africa, providing services across multiple countries."
+        },
+
+         {
+            "name": "Access Bank",
+            "address": "abuja, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@accessbankplc.com",
+            "website": "https://www.accessbankplc.com",
+            "image": "Access-bank.png",
+            "membershipLevel": 2,
+            "description": "Access Bank is a Nigerian commercial bank with a significant presence in the country and other African nations. It offers a wide range of financial services to individuals and businesses."
+        },
+
+         {
+            "name": "Zenith Bank",
+            "address": "ibadan, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@zenithbank.com",
+            "website": "https://www.zenithbank.com",
+            "image": "zenith.png",
+            "membershipLevel": 2,
+            "description": "Zenith Bank is a Nigerian commercial bank with a significant presence in the country and other African nations. It offers a wide range of financial services to individuals and businesses."
+        },
+
+         {
+            "name": "jumia",
+            "address": "Lagos, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@jumia.com",
+            "website": "https://www.jumia.com",
+            "image": "Jumia.png",
+            "membershipLevel": 2,
+            "description": "Jumia is a Nigerian e-commerce company that operates in multiple African countries. It offers a wide range of products and services to customers across the continent."
+        },
+
+         {
+            "name": "interswitch",
+            "address": "abuja, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@interswitch.com",
+            "website": "https://www.interswitchgroup.com",
+            "image": "interswitch.png",
+            "membershipLevel": 3,
+            "description": "Interswitch is a Nigerian financial technology company that provides payment solutions and services to businesses and individuals across Africa."
+        },
+
+         {
+            "name": "GT Bank",
+            "address": "abuja, Nigeria",
+            "phone": "+234 803 123 4567",
+            "email": "info@gtbank.com",
+            "website": "https://www.gtbank.com",
+            "image": "gtbank.webp",
+            "membershipLevel": 3,
+            "description": "GT Bank is a Nigerian commercial bank with a significant presence in the country and other African nations. It offers a wide range of financial services to individuals and businesses."
+        }
+    ]
+}
