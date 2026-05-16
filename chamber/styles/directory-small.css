@@ -279,6 +279,11 @@ footer a{
 
 }
 
+footer span{
+    font-weight: 900;
+    margin-right: 5px;
+}
+
 footer a:hover{
     color: var(--gold-accent);
 }
