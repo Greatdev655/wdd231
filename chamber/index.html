@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Using APIs to dynamically build a chamber directory web page">
+    <meta name="author" content="Ikechukwu Great">
+    <meta property="og:title" content="Chamber Directory">
+    <meta property="og:description" content="Using APIs to dynamically build a chamber directory web page">
+    <meta property="og:image" content="https://Greatdev655.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://Greatdev655.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link rel="stylesheet" href="styles/directory_large.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/directory.js" defer></script>
+    <title> Chamber Directory - Home page </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_container">
+            <img src="images/chamberlogo.webp" alt="Chamber Logo">
+            <h1>Chamber Directory</h1>
+        </div>
+
+        <nav class="navigation">
+            <div class="hamburgger-menu">
+                <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="final.html">Join</a></li>
+                <li><a href="final.html">Discover</a></li>
+            </ul>
+        </nav>
+
+
+
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Welcome to Lagos state Chamber Of Commerce</h1>
+            <p>Discover the businesses that are part of our vibrant community.</p>
+            <div class="button_container">
+                <button id="memberBtn"><i class="fa-regular fa-circle-user"></i>Become a Member</button>
+                <button id="directoryBtn"><i class="fa-regular fa-folder-open"></i>Explore the Directory</button>
+            </div>
+
+        </section>
+
+        <section class="current-events">
+            <h2>Whats's Happening Right Now! </h2>
+            <div class="current-event-container">
+                <article class="current-event-card">
+                    <img src="images/business_summit.webp" alt="business summit">
+                    <h3>Lagos Business Growth Summit</h3>
+                    <time>May 15, 2026</time>
+                    <p><strong>Location: Ikeja, Lagos</strong></p>
+                    <p>Hosted by Dangote Group — a half-day forum on expanding manufacturing and local production in
+                        Nigeria. Open to all chamber members.</p>
+                </article>
+
+                <article class="current-event-card">
+                    <img src="images/connectivity_expo.webp" alt="Digital Finance & Connectivity Expo">
+                    <h3>Digital Finance & Connectivity Expo</h3>
+                    <time>June 10, 2026</time>
+                    <p><strong>Location: Victoria Island, Lagos</strong></p>
+                    <p>MTN Nigeria and Interswitch co-host a showcase on mobile money, fintech innovation, and digital infrastructure across West Africa.</p>
+                </article>
+
+                <article class="current-event-card">
+                    <img src="images/smeworkshop.webp" alt="event">
+                    <h3>SME Business Financing Workshop</h3>
+                    <time>July 20, 2026</time>
+                    <p><strong>Location: Lekki, Lagos</strong></p>
+                    <p>The three major banks come together to educate small and medium business owners on loans, grants, and investment opportunities available in Lagos.</p>
+                </article>
+
+
+
+
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="footer_contact-info">
+            <p> <span>Name:</span> Lagos Chamber Of Commerce</p>
+            <p> <span>Address:</span> No 10 , Allen avenue , Ikeja Lagos</p>
+            <p><span>Phone Number:</span> +234 912448540</p>
+            <p> <span>Email Address:</span> <a href="mailto:greatiyke7@gmail.com">greatiyke7@gmail.com</a></p>
+        </div>
+
+        <div class="quick-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="final.html">Join</a></li>
+                <li><a href="final.html">Discover</a></li>
+            </ul>
+        </div>
+
+        <div class="legal-info">
+            <p>WDD231 - Ikechukwu Great</p>
+            <p>Copyright &copy; <span id="currentyear"></span>, Lagos Chamber Of Commerce
+                <span id="lastModified"></span>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

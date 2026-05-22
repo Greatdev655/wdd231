@@ -1,4 +1,69 @@
 @media screen and (min-width: 770px) {
+
+    /* ------hero section--------------- */
+
+    main{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .hero-section {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)),
+            url("../images/homebanner2.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 2rem;
+    }
+
+    .hero-section h1 {
+        color: var(--white);
+        font-family: var(--heading-font);
+        font-size: 2.8rem;
+        text-align: center;
+        /* margin-bottom: 0.5rem; */
+        margin-top: .75rem;
+
+    }
+
+    .hero-section p {
+        color: var(--white);
+        font-family: var(--body-font);
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ------button container --------- */
+
+    .button_container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .button_container button {
+        padding: 1.2rem 1.5rem;
+        border: none;
+        border-radius: 30px;
+        background-color: #0078d4;
+        color: white;
+        cursor: pointer;
+    }
+
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -27,9 +92,12 @@
     /* main */
 
     main {
-        margin: 2rem auto;
-        padding: 0rem 2rem;
+        /* margin: .75rem auto; */
+        padding: .5rem;
         max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
 
@@ -43,6 +111,29 @@
         align-items: center;
         overflow: none;
     }
+
+    /* ----------current event section for home page(large screen)----- */
+
+    .current-events{
+        justify-content: center;
+        align-items: center;
+    }
+    .current-event-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        place-content: center;
+    }
+
+    .current-event-card{
+        width: 300px;
+        padding: 1rem;
+    }
+
+    .current-event-card h2{
+        font-size: 1.2rem;
+    }
+
 
     footer {
         flex-direction: row;
@@ -61,9 +152,74 @@
     }
 
     #directory-container.list .card {
-    flex-direction: row;
-    align-items: center;
-    overflow: none;
-}
+        flex-direction: row;
+        align-items: center;
+        overflow: none;
+    }
+
+     .hero-section {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)),
+            url("../images/homebanner2.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3.2rem 2.4rem;
+    }
+
+    .hero-section h1 {
+        color: var(--white);
+        font-family: var(--heading-font);
+        font-size: 2.5rem;
+        text-align: center;
+        /* margin-bottom: 0.5rem; */
+        margin-top: .75rem;
+
+    }
+
+    .hero-section p {
+        color: var(--white);
+        font-family: var(--body-font);
+        font-size: 1.25 rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ------button container --------- */
+
+    .button_container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .button_container button {
+        padding: 1.2rem 1.5rem;
+        border: none;
+        border-radius: 30px;
+        background-color: #0078d4;
+        color: white;
+        cursor: pointer;
+    }
+
+
+     /* ----------current event section for home page(large screen)----- */
+
+    .current-events{
+        justify-content: center;
+        align-items: center;
+    }
+    .current-event-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        place-content: center;
+    }
 
 }

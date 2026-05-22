@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const currentYear = document.getElementById("currentyear");
     const modifiedDate = document.getElementById("lastModified");
@@ -6,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     currentYear.innerHTML = today.getFullYear();
     const lastModified = new Date(document.lastModified);
     modifiedDate.innerHTML = lastModified.toDateString();
+
+
+
+
+
 
     // hamburger & nav menu 
 
@@ -99,4 +105,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-}); 
+
+
+
+});
+
+// ------------------------- CTA BUTTONS FOR HERO SECTION : HOME PAGE -----------------------
+
+
+const memberBtn = document.getElementById("memberBtn");
+const directoryBtn = document.getElementById("directoryBtn");
+
+
+memberBtn.addEventListener("click", () => {
+    window.location.href = "join.html";
+})
+
+directoryBtn.addEventListener("click", () => {
+    window.location.href = "directory.html";
+})
