@@ -178,8 +178,9 @@ nav ul li a.active {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: .75rem;
+    padding: .1rem;
     margin-top: 5px;
+    justify-content: center;
 }
 
 .current-events h1{
@@ -244,7 +245,8 @@ nav ul li a.active {
 /* ---------------------- MAIN ------------------------- */
 
 main {
-    padding: .75rem;
+    padding: .5rem;
+    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
 }
