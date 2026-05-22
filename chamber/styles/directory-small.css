@@ -199,9 +199,10 @@ nav ul li a.active {
 .current-event-card{
     display: flex;
     flex-direction: column;
-    background-color: #dadada;
+    background-color: var(--cream-background);
     margin-bottom: 15px;
     border: none;
+    border-left: .3px solid var(--gold-accent);
     border-radius: 20px;
     padding: .75rem;
     width: 100%;
