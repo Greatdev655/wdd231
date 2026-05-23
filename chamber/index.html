@@ -28,6 +28,8 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
     <title> Chamber Directory - Home page </title>
 </head>
 
@@ -65,33 +67,36 @@
             </div>
 
         </section>
+        <!-- -------current events section -->
 
         <section class="current-events">
             <h2>Whats's Happening Right Now! </h2>
             <div class="current-event-container">
                 <article class="current-event-card">
-                    <img src="images/business_summit.webp" alt="business summit">
+                    <img src="images/business_summit.webp" alt="business summit" loading="lazy">
                     <h3>Lagos Business Growth Summit</h3>
-                    <time>May 15, 2026</time>
+                    <time datetime="2026-05-15">May 15, 2026</time>
                     <p><strong>Location: Ikeja, Lagos</strong></p>
                     <p>Hosted by Dangote Group — a half-day forum on expanding manufacturing and local production in
                         Nigeria. Open to all chamber members.</p>
                 </article>
 
                 <article class="current-event-card">
-                    <img src="images/connectivity_expo.webp" alt="Digital Finance & Connectivity Expo">
+                    <img src="images/connectivity_expo.webp" alt="Digital Finance & Connectivity Expo" loading="lazy">
                     <h3>Digital Finance & Connectivity Expo</h3>
-                    <time>June 10, 2026</time>
+                    <time datetime="2026-06-10">June 10, 2026</time>
                     <p><strong>Location: Victoria Island, Lagos</strong></p>
-                    <p>MTN Nigeria and Interswitch co-host a showcase on mobile money, fintech innovation, and digital infrastructure across West Africa.</p>
+                    <p>MTN Nigeria and Interswitch co-host a showcase on mobile money, fintech innovation, and digital
+                        infrastructure across West Africa.</p>
                 </article>
 
                 <article class="current-event-card">
-                    <img src="images/smeworkshop.webp" alt="event">
+                    <img src="images/smeworkshop.webp" alt="event" loading="lazy">
                     <h3>SME Business Financing Workshop</h3>
-                    <time>July 20, 2026</time>
+                    <time datetime="2026-07-20">July 20, 2026</time>
                     <p><strong>Location: Lekki, Lagos</strong></p>
-                    <p>The three major banks come together to educate small and medium business owners on loans, grants, and investment opportunities available in Lagos.</p>
+                    <p>The three major banks come together to educate small and medium business owners on loans, grants,
+                        and investment opportunities available in Lagos.</p>
                 </article>
 
 
@@ -100,6 +105,33 @@
             </div>
 
 
+        </section>
+
+
+        <!-- ------------weather section------------------------------ -->
+
+        <section class="weather-section">
+            <h2>Current Weather in Lagos</h2>
+            <div class="weather-info">
+                <div class="weather-data">
+                    <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+                    <img src="" alt="weather icon" id="weather-icon" loading="lazy">
+                </div>
+                <p><strong>Description:</strong> <span id="description"></span></p>
+            </div>
+
+            <div class="forecast-container"  id="forecast-weather">
+                <!-- will be populated using Javascript. -->
+            </div>
+        </section>
+
+        <!--   ---------spotlight section------------------------------ -->
+
+        <section class="spotlight-section">
+            <h2>Member Spotlights</h2>
+            <div class="spotlight-container"  id="spotlight-container">
+                <!-- populated using js  -->
+            </div>
         </section>
     </main>
 

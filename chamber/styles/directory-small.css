@@ -1,4 +1,3 @@
-
 :root {
     --primary-navy: #1B3C6E;
     --dark-navy: #0F2347;
@@ -35,7 +34,7 @@ header {
     background-color: var(--primary-navy);
     padding: 1rem;
     display: flex;
-    flex-direction: column;      
+    flex-direction: column;
 }
 
 header .logo_container {
@@ -105,18 +104,18 @@ nav ul li a.active {
     cursor: pointer;
     font-size: 1.5rem;
     padding: 0.5rem;
-    align-self: flex-end;      
-} 
+    align-self: flex-end;
+}
 
 
 
 /* -----------------------------HERO SECTION --------------------------------- */
 
-.hero-section{
+.hero-section {
     background:
-    linear-gradient(rgba(0,0,0,0.6),
-                    rgba(0,0,0,0.6)),
-    url("../images/homebannerportrait.webp");
+        linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url("../images/homebannerportrait.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -163,7 +162,9 @@ nav ul li a.active {
     font-size: 0.9rem;
     cursor: pointer;
     transition: all var(--transition) ease;
-}.button_container button:hover {
+}
+
+.button_container button:hover {
     background-color: var(--gold-accent);
     color: var(--primary-navy);
 }
@@ -174,7 +175,7 @@ nav ul li a.active {
 
 
 /* --------current event section for home page------------- */
-.current-events{
+.current-events {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -183,11 +184,11 @@ nav ul li a.active {
     justify-content: center;
 }
 
-.current-events h1{
+.current-events h2 {
     color: var(--primary-navy);
 }
 
-.current-event-container{
+.current-event-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -196,7 +197,7 @@ nav ul li a.active {
     align-items: center;
 }
 
-.current-event-card{
+.current-event-card {
     display: flex;
     flex-direction: column;
     background-color: var(--cream-background);
@@ -211,37 +212,198 @@ nav ul li a.active {
     cursor: pointer;
 }
 
-.current-event-card:hover{
+.current-event-card:hover {
     transform: translateY(-10px);
     /* border: 1px solid var(--dark-navy); */
     box-shadow: none;
+    border-left: .3px solid var(--primary-navy);
 }
-.current-event-card img{
+
+.current-event-card img {
     width: 100%;
     height: auto;
     max-height: 200px;
     border-radius: 15px;
 }
 
-.current-event-card h2{
+.current-event-card h3 {
     font-size: var(--heading-font);
     color: var(--dark-navy);
     margin-top: 10px;
 }
 
-.current-event-card p{
+.current-event-card p {
     font-size: var(--body-font);
     color: var(--charcoal-text);
-    line-break:loose;
+    line-break: loose;
 }
 
-.current-event-card p strong{
+.current-event-card p strong {
     font-weight: 600;
     color: var(--primary-navy);
     margin-bottom: 15px;
 }
 
+time {
+    font-size: 0.85rem;
+    color: var(--charcoal-text);
+    margin-bottom: 10px;
+}
 
+
+
+/* ---------------weather section--------------- */
+.weather-section {
+    width: 100%;
+    padding: .5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)), url("../images/suuny.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;      
+
+}
+.weather-section h2{
+    color: var(--white);
+    margin-bottom: 15px;
+    padding: .5rem;
+}
+
+.weather-info{
+    padding: .5rem;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+.weather-info p{
+    color: var(--white);
+    font-size: var(--body-font);
+}
+
+.weather-data{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.weather-data p{
+    color: var(--white);
+}
+
+.weather-data img{
+    width: 50px;
+    height: 80px;
+}
+
+.forecast-container{
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+
+}
+
+.forecast-container p{
+    color: var(--white);
+}
+
+
+
+
+/* ----------spotlight section ---------- */
+
+.spotlight-section {
+    width: 100%;
+    padding: .5rem;
+          
+}
+
+.spotlight-section h2 {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+.spotlight-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 0.75rem;
+}
+
+.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    background-color: var(--cream-background);
+    border-radius: 20px;
+    border: 0.5px solid lightgrey;
+    transition: all 0.3s ease;
+}
+
+.spotlight-card:hover {
+    transform: scale(1.02);
+    border: 1px solid var(--primary-navy);
+}
+
+.spotlight-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-navy);
+}
+
+.spotlight-card p {
+    font-size: 0.85rem;
+}
+
+.spotlight-card a {
+    color: var(--white);
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--primary-navy);
+    width: fit-content;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    transition: all var(--transition) ease;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+.spotlight-card i{
+    color: var(--primary-navy);
+    font-size: 0.85rem;
+    margin-right: 0.25rem;
+}
+
+.membership-level{
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: var(--gold-accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 18px;
+    color: var(--dark-navy);
+    border: none;
+    margin-bottom: 15px;
+
+}
 
 /* ---------------------- MAIN ------------------------- */
 
@@ -272,7 +434,7 @@ main {
 .view-toggle-contianer {
     display: flex;
     padding: 0.3rem;
-    margin-bottom: 1rem;          
+    margin-bottom: 1rem;
 }
 
 .view-toggle-contianer button {
@@ -304,7 +466,7 @@ main {
     gap: 1rem;
 }
 
-#directory-container.grid  .card img {
+#directory-container.grid .card img {
     width: 80px;
     height: 80px;
     object-fit: contain;
@@ -314,7 +476,7 @@ main {
 
 #directory-container.list {
     display: flex;
-    flex-direction: column;       
+    flex-direction: column;
     gap: 0.75rem;
 }
 
@@ -358,7 +520,7 @@ main {
 }
 
 .card:hover {
-    border:1px solid var(-- --primary-navy);
+    border: 1px solid var(-- --primary-navy);
 }
 
 .card img {
@@ -459,6 +621,7 @@ footer {
     flex-direction: column;
     gap: 0.4rem;
 }
+
 /* 
 footer h3 {
     color: var(--white);
