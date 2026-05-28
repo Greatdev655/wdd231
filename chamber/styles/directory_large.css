@@ -155,9 +155,20 @@
 
 }
 
+/* ----------------LARGER SCREENS----------------------------------- */
+
+
 @media screen and (min-width:1024px) {
     body {
         width: 100vw;
+    }
+
+    header{
+        justify-content: space-around;
+        display: flex;
+        gap: 10px;
+        padding: .5rem;
+
     }
 
     main {
