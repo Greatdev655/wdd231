@@ -52,11 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             container.appendChild(card);
+
+            card.querySelector(".modalBtn").addEventListener("click", () => {
+                const modal = document.getElementById(`${member.level.toLowerCase()}-modal`);
+                if (modal) {
+                    modal.showModal();
+                } else {
+                    console.error(`Modal with id ${member.level.toLowerCase()}-modal not found.`);
+                }
+
+
+            });
+
+            const closeButtons = document.querySelectorAll(".close-modal");
+
+            closeButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const modal = button.closest("dialog");
+                    if (modal) {
+                        modal.close();
+                    }
+                });
+            });
+
         });
+
+        
     };
 
     displayMembers(membershipData);
 
-    membership.benefits.map(benefit => `<li>${benefit}</li>`).join("")
+   
 
 });

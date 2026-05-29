@@ -230,6 +230,72 @@ input[type="submit"]:hover {
 }
 
 
+/* -------- Dialog Styles -------- */
+
+dialog {
+    border: none;
+    border-radius: 20px;
+    padding: 1.5rem;
+    background-color: var(--white);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+    
+}
+
+dialog h2{
+    font-size: 1.25rem;
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+}
+
+dialog p{
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+dialog .close-modal {
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-navy);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+dialog .close-modal:hover {
+    background: transparent;
+    border: 2px solid var(--dark-navy);
+    color: var(--dark-navy);
+    transform: scale(1.02);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog ul{
+    list-style-type: none;
+    padding-left: .75rem;
+    margin-bottom: 1.5rem;
+}
+
+dialog ul li{
+    margin-bottom: .5rem;
+    font-size: 0.9rem;
+    background-color: var(--surface-background);
+    padding: .75rem;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+
 
 
 
