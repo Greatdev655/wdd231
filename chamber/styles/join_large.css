@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        align-items: start;
+    }
+
+    .name_container {
+        flex-direction: row;
+    }
+
+    dialog {
+        max-width: 480px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        grid-template-columns: 1.2fr 0.8fr;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .membership_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+    }
+
+}

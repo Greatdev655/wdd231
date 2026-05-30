@@ -30,6 +30,8 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
 }
 
 /* ---- Form Container ---- */
@@ -68,7 +70,7 @@ main {
     gap: 5px;
 }
 
-/* ---- Name Container (side by side) ---- */
+/* ---- Name Container ---- */
 .name_container {
     display: flex;
     flex-direction: column;
@@ -120,7 +122,6 @@ select:focus {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 /* ---- Textarea ---- */
 textarea {
     width: 100%;
@@ -166,60 +167,105 @@ input[type="submit"]:hover {
     transform: scale(1.02);
 }
 
-
-
-/* -----------------member card------------------------------- */
-
-.membership_section{
+/* ---- Membership Section ---- */
+.membership_section {
     width: 100%;
     padding: .5rem;
-
 }
 
-.membership_container{
+.membership_section h2 {
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+}
+
+/* ---- Membership Cards ---- */
+.membership_container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-.membership-card{
+/* Page load animation */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
     display: flex;
     flex-direction: column;
-    align-items: start;
     gap: .75rem;
-    background-color: var(--cream-background);
+    background-color: var(--white);
     border-radius: 20px;
     border: 0.5px solid lightgrey;
-    transition: all 0.3s ease;
-
+    padding: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeSlideUp 1s ease-in-out forwards;
+    opacity: 0;
 }
 
-.membership-card h2{
-    font-size: 1.25rem;
+.membership-card:nth-child(1) { animation-delay: 0s; }
+.membership-card:nth-child(2) { animation-delay: 0.2s; }
+.membership-card:nth-child(3) { animation-delay: 0.4s; }
+.membership-card:nth-child(4) { animation-delay: 0.6s; }
+
+.membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Level color accents */
+.membership-card.np     { border-top: 4px solid #888888; }
+.membership-card.bronze { border-top: 4px solid #cd7f32; }
+.membership-card.silver { border-top: 4px solid #a8a9ad; }
+.membership-card.gold   { border-top: 4px solid var(--gold-accent); }
+
+.membership-card h2 {
+    font-size: 1.1rem;
     color: var(--primary-navy);
-    margin-top: 1rem;
-    margin-left: 1rem;
+    font-family: var(--heading-font);
 }
 
-.membership-card p{
+.membership-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+}
+
+.membership-description {
     font-size: 0.85rem;
-    margin-left: 1rem;
+    color: var(--charcoal-text);
 }
 
-.modalBtn{
-    margin-left: 1rem;
-    padding: 0.75rem 1rem;
+.membership-level {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--charcoal-text);
+}
+
+.modalBtn {
+    padding: 0.65rem 1rem;
     background-color: var(--primary-navy);
     color: var(--white);
-    border: none;
+    border: 2px solid transparent;
     border-radius: 10px;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-family: var(--body-font);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     width: fit-content;
+    margin-top: auto;
 }
 
 .modalBtn:hover {
@@ -229,41 +275,66 @@ input[type="submit"]:hover {
     transform: scale(1.02);
 }
 
-
-/* -------- Dialog Styles -------- */
-
+/* ---- Dialog / Modal ---- */
 dialog {
+    position: relative;
     border: none;
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: var(--white);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15);
     width: 90%;
-    max-width: 400px;
-    transition: all 0.3s ease;
-    
+    max-width: 420px;
 }
 
-dialog h2{
+dialog h2 {
     font-size: 1.25rem;
     color: var(--primary-navy);
-    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
 }
 
-dialog p{
-    font-size: 0.9rem;
+dialog .modal-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold-dark);
+    margin-bottom: 0.25rem;
+}
+
+dialog .modal-tagline {
+    font-size: 0.85rem;
+    color: var(--charcoal-text);
+    margin-bottom: 1.25rem;
+}
+
+dialog ul {
+    list-style-type: none;
+    padding: 0;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+dialog ul li {
+    font-size: 0.85rem;
+    background-color: var(--surface-background);
+    padding: 0.65rem 0.75rem;
+    border-radius: 10px;
 }
 
 dialog .close-modal {
-    padding: 0.75rem 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.65rem;
     background-color: var(--primary-navy);
     color: var(--white);
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1.1rem;
     font-family: var(--body-font);
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -272,30 +343,105 @@ dialog .close-modal:hover {
     background: transparent;
     border: 2px solid var(--dark-navy);
     color: var(--dark-navy);
-    transform: scale(1.02);
 }
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-dialog ul{
-    list-style-type: none;
-    padding-left: .75rem;
-    margin-bottom: 1.5rem;
+/* ---- Thankyou Page ---- */
+.thankyou-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    min-height: 70vh;
 }
 
-dialog ul li{
-    margin-bottom: .5rem;
-    font-size: 0.9rem;
-    background-color: var(--surface-background);
-    padding: .75rem;
-    border-radius: 10px;
+.thankyou-container {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
     width: 100%;
-
+    max-width: 600px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
+.thankyou-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
 
+.thankyou-header i {
+    font-size: 3rem;
+    color: var(--gold-accent);
+}
 
+.thankyou-header h1 {
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    font-family: var(--heading-font);
+}
 
+.thankyou-header p {
+    font-size: 0.9rem;
+    color: var(--charcoal-text);
+}
+
+.thankyou-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.thankyou-details h2 {
+    font-size: 1.1rem;
+    color: var(--primary-navy);
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface-background);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--primary-navy);
+}
+
+.detail-value {
+    color: var(--charcoal-text);
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    padding: 0.85rem;
+    background-color: var(--primary-navy);
+    color: var(--white);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    background: transparent;
+    border: 2px solid var(--dark-navy);
+    color: var(--dark-navy);
+}
 
