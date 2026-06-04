@@ -191,13 +191,15 @@ input[type="submit"]:hover {
 @keyframes fadeSlideUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(35px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+
 
 .membership-card {
     display: flex;
