@@ -1,0 +1,356 @@
+:root {
+  --primary-navy: #1B3C6E;
+  --dark-navy: #0F2347;
+  --gold-accent: #C99200;
+  --cream-background: #F7F5F0;
+  --surface-background: #EDEBE4;
+  --charcoal-text: #2C2C2A;
+  --gold-dark: #6E5100;
+  --white: #ffffff;
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Poppins', sans-serif;
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--cream-background);
+  color: var(--charcoal-text);
+  line-height: 1.6;
+}
+
+/* ---------- NAV — BASE (mobile hidden) ---------- */
+/* BUG 3 FIX: nav must be hidden by default so toggle works */
+nav ul {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-family: var(--body-font);
+  width: 100%;
+  transition: all var(--transition) ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: var(--gold-accent);
+  color: var(--primary-navy);
+  transform: translateY(-3px);
+}
+
+/* ---------- HAMBURGER ---------- */
+#menu-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  align-self: flex-end;
+}
+
+/* ---------- DESKTOP NAV (770px+) ---------- */
+/* BUG 4 FIX: always show nav on desktop, hide hamburger */
+@media (min-width: 770px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+}
+
+/* ---------- HERO ---------- */
+.discover-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/lagos_hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #F7F5F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 1.5rem 3rem;
+}
+
+.discover-hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.discover-hero h1 {
+  /* BUG 1 FIX: one font-family only — use the heading variable */
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  color: var(--gold-accent);
+  margin-bottom: 0.75rem;
+}
+
+.discover-hero p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: rgba(247, 245, 240, 0.85);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- VISIT BANNER ---------- */
+.visit-banner {
+  background: #eef2f9;
+  border-left: 4px solid var(--gold-accent);
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  color: var(--primary-navy);
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+}
+
+/* ---------- MAIN ---------- */
+.discover-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.places-heading {
+  font-family: var(--heading-font);
+  color: var(--primary-navy);
+  font-size: 1.4rem;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------- CARD ENTRANCE ANIMATION ---------- */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- PLACE CARD ---------- */
+.place-card {
+  background: var(--cream-background);
+  border: 1px solid #e0dbd0;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* BUG 2 FIX: removed justify-content and align-items — they break horizontal cards */
+  /* BUG 5 FIX: removed width:100% — the grid handles sizing */
+  opacity: 0;
+  animation: cardEntrance 0.55s ease forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-card:nth-child(1) { animation-delay: 0.05s; }
+.place-card:nth-child(2) { animation-delay: 0.12s; }
+.place-card:nth-child(3) { animation-delay: 0.19s; }
+.place-card:nth-child(4) { animation-delay: 0.26s; }
+.place-card:nth-child(5) { animation-delay: 0.33s; }
+.place-card:nth-child(6) { animation-delay: 0.40s; }
+.place-card:nth-child(7) { animation-delay: 0.47s; }
+.place-card:nth-child(8) { animation-delay: 0.54s; }
+
+.place-card figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.place-card figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.place-card-body {
+  padding: 1rem 1.1rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.place-card h2 {
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  color: var(--primary-navy);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.place-card address {
+  font-family: var(--body-font);
+  font-size: 0.78rem;
+  color: #888;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.place-card p {
+  font-family: var(--body-font);
+  font-size: 0.83rem;
+  color: #444;
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+.learn-more-btn {
+  align-self: flex-start;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--primary-navy);
+  border: none;
+  border-radius: 5px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  transition: background 0.2s;
+}
+
+.learn-more-btn:hover {
+  background: var(--gold-accent);
+}
+
+/* ===========================================
+   SMALL SCREEN GRID (default — up to 640px)
+   Single column, one card per row
+   =========================================== */
+.places-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 1.25rem;
+}
+
+.place-card:nth-child(1) { grid-area: card1; }
+.place-card:nth-child(2) { grid-area: card2; }
+.place-card:nth-child(3) { grid-area: card3; }
+.place-card:nth-child(4) { grid-area: card4; }
+.place-card:nth-child(5) { grid-area: card5; }
+.place-card:nth-child(6) { grid-area: card6; }
+.place-card:nth-child(7) { grid-area: card7; }
+.place-card:nth-child(8) { grid-area: card8; }
+
+/* ===========================================
+   MEDIUM SCREEN GRID (641px – 1024px)
+   Asymmetric 2-col. card1 and card8 span full width.
+   =========================================== */
+@media (min-width: 641px) {
+
+  .places-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card5"
+      "card6 card7"
+      "card8 card8";
+    gap: 1.25rem;
+  }
+
+  /* Full-width cards go horizontal */
+  .place-card:nth-child(1),
+  .place-card:nth-child(8) {
+    flex-direction: row;
+  }
+
+  .place-card:nth-child(1) figure,
+  .place-card:nth-child(8) figure {
+    flex-shrink: 0;
+    width: 320px;
+  }
+
+  .place-card:nth-child(1) figure img,
+  .place-card:nth-child(8) figure img {
+    height: 100%;
+    min-height: 200px;
+  }
+
+  /* HOVER EFFECTS — medium and up only (not mobile) */
+  .place-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .place-card figure img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.1) saturate(1.25);
+  }
+}
+
+/* ===========================================
+   LARGE SCREEN GRID (1025px and above)
+   Asymmetric 3-col layout with feature cards.
+   =========================================== */
+@media (min-width: 1025px) {
+
+  .places-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card1 card2"
+      "card3 card4 card4"
+      "card5 card6 card7"
+      "card8 card8 card8";
+    gap: 1.5rem;
+  }
+
+  .place-card:nth-child(1),
+  .place-card:nth-child(4),
+  .place-card:nth-child(8) {
+    flex-direction: row;
+  }
+
+  .place-card:nth-child(1) figure,
+  .place-card:nth-child(4) figure,
+  .place-card:nth-child(8) figure {
+    flex-shrink: 0;
+    width: 340px;
+  }
+
+  .place-card:nth-child(1) figure img,
+  .place-card:nth-child(4) figure img,
+  .place-card:nth-child(8) figure img {
+    height: 100%;
+    min-height: 200px;
+  }
+}
