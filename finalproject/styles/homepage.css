@@ -119,6 +119,7 @@ header{
   cursor: pointer;
   font-size: 1.5rem;
   padding: 0.5rem;
+  margin-left: auto;
 }
 
 /* ------------home page/hero section------------ */
