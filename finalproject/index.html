@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/homepage_large.css">
     <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/home.js"></script>
     <title> NaijaStack-Home page</title>
 </head>
 
@@ -53,10 +54,10 @@
 
     <main>
         <section class="hero_section">
-            <p class="hero_label">Nigeria's Tech Ecosystem</p>
+            <p class="hero_label">Nigeria's <span>Tech</span> Ecosystem</p>
             <h1>Discover <span><strong>Nigeria's</strong></span> Most Innovative startups</h1>
             <p>
-                Niaja Stack is your go-to directory for tracking the startups shaping
+                Niaja Stack is your go-to directory for tracking the startups <br> shaping
                 Africa's digital future - from fintech giants to Edtech pioneers.
             </p>
 
@@ -67,14 +68,141 @@
 
         </section>
 
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">18+</span>
+                <span class="stat-label">Startups Listed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Sectors Covered</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Cities Represented</span>
+            </div>
+        </section>
+
+        <!-- ======= FEATURED STARTUPS ======= -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>Featured <span>Startups</span></h2>
+                <p>Handpicked companies leading Nigeria's digital revolution</p>
+            </div>
+
+            <div class="featured-grid" id="featured-grid">
+                <!-- JS renders cards here -->
+            </div>
+
+            <div class="view-all-container">
+                <a href="directory.html" class="view-all-btn">
+                    View All Startups <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ======= SECTORS GRID ======= -->
+        <section class="sectors-section">
+            <div class="section-header">
+                <h2>Explore by <span>Sector</span></h2>
+                <p>Browse startups across Nigeria's most active tech industries</p>
+            </div>
+
+            <div class="sectors-grid">
+                <a href="directory.html?sector=Fintech" class="sector-card">
+                    <i class="fa-solid fa-coins"></i>
+                    <h3>Fintech</h3>
+                    <span>7 Startups</span>
+                </a>
+
+                <a href="directory.html?sector=Edtech" class="sector-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Edtech</h3>
+                    <span>2 Startups</span>
+                </a>
+
+                <a href="directory.html?sector=Healthtech" class="sector-card">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>Healthtech</h3>
+                    <span>3 Startups</span>
+                </a>
+
+                <a href="directory.html?sector=Logistics" class="sector-card">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Logistics</h3>
+                    <span>3 Startups</span>
+                </a>
+
+                <a href="directory.html?sector=Agritech" class="sector-card">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                    <h3>Agritech</h3>
+                    <span>3 Startups</span>
+                </a>
+            </div>
+        </section>
+
 
 
     </main>
 
+    <!-- ======= FOOTER ======= -->
     <footer>
+        <div class="footer-container">
 
+            <!-- brand -->
+            <div class="footer-brand">
+                <div class="logo_container">
+                    <img src="images/naijastacklogo .webp" alt="NaijaStack logo">
+                    <h2>NaijaStack</h2>
+                </div>
+                <p class="footer-tagline">Powering Africa's Tech Future</p>
+            </div>
+
+            <!-- nav links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+
+            <!-- sectors links -->
+            <div class="footer-links">
+                <h4>Sectors</h4>
+                <ul>
+                    <li><a href="directory.html?sector=Fintech">Fintech</a></li>
+                    <li><a href="directory.html?sector=Edtech">Edtech</a></li>
+                    <li><a href="directory.html?sector=Healthtech">Healthtech</a></li>
+                    <li><a href="directory.html?sector=Logistics">Logistics</a></li>
+                    <li><a href="directory.html?sector=Agritech">Agritech</a></li>
+                </ul>
+            </div>
+
+            <!-- video + contact -->
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Video Demo
+                        </a>
+                    </li>
+                    <li><a href="about.html">Contact Us</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- bottom bar -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> NaijaStack. All rights reserved.</p>
+            <p>Built with <i class="fa-solid fa-heart" style="color: var(--primary-accent);"></i> in Lagos, Nigeria</p>
+        </div>
     </footer>
-
 
 
 </body>
