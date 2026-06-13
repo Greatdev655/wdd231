@@ -107,7 +107,7 @@
         padding: 1rem;
     }
 
-     .footer-container {
+    .footer-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -115,6 +115,26 @@
         margin: 0 auto;
         padding-bottom: 2.3rem;
         border-bottom: 1px solid rgba(0, 232, 122, 0.15);
+    }
+
+    .directory-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .thankyou-actions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row;
     }
 
 
@@ -185,6 +205,18 @@
 
     .footer-container:last-child {
         grid-column: 1 / -1;
+    }
+
+    .directory-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
     }
 
 

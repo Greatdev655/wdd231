@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Learn about NaijaStack, our mission to showcase Nigerian tech startups, and nominate a startup to be listed in our directory.">
+  <meta name="author" content="Greatdev655">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NaijaStack | About Us">
+  <meta property="og:description"
+    content="Learn about NaijaStack and nominate a Nigerian tech startup to be listed in our directory.">
+  <meta property="og:image" content="images/og-image.webp">
+  <meta property="og:type" content="website">
+
+  <title>NaijaStack | About Us</title>
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/base_large.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= HEADER ======= -->
+  <header>
+    <div class="logo_container">
+
+      <img src="images/naijastacklogo .webp" alt="NaijaStack logo">
+      <h2>NaijaStack</h2>
+    </div>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="about.html#contact">Join</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburgger-menu">
+      <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======= PAGE HERO ======= -->
+    <section class="page-hero">
+      <h1>About <span>NaijaStack</span></h1>
+      <p>Our mission, our story, and how you can get involved</p>
+    </section>
+
+    <!-- ======= MISSION SECTION ======= -->
+    <section class="mission-section">
+      <div class="mission-container">
+
+        <div class="mission-text">
+          <h2>Who We <span>Are</span></h2>
+          <p>NaijaStack is a curated directory dedicated to celebrating and amplifying Nigerian tech startups. We
+            believe Africa's digital future is being built right here in Lagos, Abuja, Port Harcourt and beyond — and
+            the world deserves to know about it.</p>
+          <p>From fintech giants processing billions in transactions to agritech innovators feeding millions — Nigerian
+            startups are solving real problems with world-class technology. NaijaStack puts them all in one place.</p>
+        </div>
+
+        <div class="mission-stats">
+          <div class="mission-stat-card">
+            <i class="fa-solid fa-rocket"></i>
+            <h3>18+</h3>
+            <p>Startups Listed</p>
+          </div>
+          <div class="mission-stat-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>5</h3>
+            <p>Sectors Covered</p>
+          </div>
+          <div class="mission-stat-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>4</h3>
+            <p>Cities Represented</p>
+          </div>
+          <div class="mission-stat-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>10K+</h3>
+            <p>Combined Employees</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= VALUES SECTION ======= -->
+    <section class="values-section">
+      <div class="section-header">
+        <h2>What We <span>Stand For</span></h2>
+        <p>The principles that guide everything we do</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Accuracy</h3>
+          <p>Every startup listing is researched and verified to ensure reliable, up-to-date information.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <h3>Inclusivity</h3>
+          <p>We celebrate startups across all sectors, cities, and funding stages — not just the unicorns.</p>
+        </div>
+        <div class="value-card">
+          <i class="fa-solid fa-globe-africa"></i>
+          <h3>African Pride</h3>
+          <p>We are unapologetically Nigerian and deeply proud of the innovation happening on this continent.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CONTACT / NOMINATION FORM ======= -->
+    <section class="contact-section" id="contact">
+      <div class="section-header">
+        <h2>Nominate a <span>Startup</span></h2>
+        <p>Know a Nigerian tech startup that deserves to be listed? Tell us about them.</p>
+      </div>
+
+      <form class="nomination-form" action="thankyou.html" method="get">
+
+        <div class="form-group">
+          <label for="your-name">Your Name <span class="required">*</span></label>
+          <input type="text" id="your-name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="your-email">Your Email <span class="required">*</span></label>
+          <input type="email" id="your-email" name="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="startup-name">Startup Name <span class="required">*</span></label>
+          <input type="text" id="startup-name" name="startup" placeholder="Enter the startup's name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="startup-sector">Sector <span class="required">*</span></label>
+          <select id="startup-sector" name="sector" required>
+            <option value="" disabled selected>Select a sector</option>
+            <option value="Fintech">Fintech</option>
+            <option value="Edtech">Edtech</option>
+            <option value="Healthtech">Healthtech</option>
+            <option value="Logistics">Logistics</option>
+            <option value="Agritech">Agritech</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="startup-website">Startup Website <span class="required">*</span></label>
+          <input type="url" id="startup-website" name="website" placeholder="https://example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="startup-description">Brief Description <span class="required">*</span></label>
+          <textarea id="startup-description" name="description"
+            placeholder="Tell us what this startup does in 2-3 sentences..." rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-paper-plane"></i> Submit Nomination
+        </button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo_container">
+          <img src="images/naijastacklogo .webp" alt="NaijaStack logo">
+          <h2>NaijaStack</h2>
+        </div>
+        <p class="footer-tagline">Powering Africa's Tech Future</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attributions.html">Attributions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Sectors</h4>
+        <ul>
+          <li><a href="directory.html?sector=Fintech">Fintech</a></li>
+          <li><a href="directory.html?sector=Edtech">Edtech</a></li>
+          <li><a href="directory.html?sector=Healthtech">Healthtech</a></li>
+          <li><a href="directory.html?sector=Logistics">Logistics</a></li>
+          <li><a href="directory.html?sector=Agritech">Agritech</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube"></i> Video Demo
+            </a>
+          </li>
+          <li><a href="about.html">Contact Us</a></li>
+          <li><a href="attributions.html">Attributions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> NaijaStack. All rights reserved.</p>
+      <p>Built with <i class="fa-solid fa-heart" style="color: var(--primary-accent);"></i> in Lagos, Nigeria</p>
+    </div>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+
+</body>
+
+</html>

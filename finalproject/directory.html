@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse all Nigerian tech startups on NaijaStack. Filter by sector including Fintech, Edtech, Healthtech, Logistics and Agritech.">
+    <meta name="author" content="Greatdev655">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NaijaStack | Startup Directory">
+    <meta property="og:description" content="Explore Nigeria's most innovative tech startups all in one place.">
+    <meta property="og:image" content="images/og-image.webp">
+    <meta property="og:type" content="website">
+
+    <title>NaijaStack | Startup Directory</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base_large.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script  src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/directory.js"></script>
+</head>
+
+<body>
+
+    <!-- ======= HEADER ======= -->
+    <header>
+        <div class="logo_container">
+            <img src="images/naijastacklogo .webp" alt="NaijaStack logo">
+            <h2>NaijaStack</h2>
+        </div>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="about.html#contact">Join</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburgger-menu">
+            <button id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ======= PAGE HERO ======= -->
+        <section class="page-hero">
+            <h1>Startup <span>Directory</span></h1>
+            <p>Explore all Nigerian tech startups shaping Africa's digital future</p>
+        </section>
+
+        <!-- ======= FILTER BAR ======= -->
+        <section class="filter-section">
+            <div class="filter-container">
+
+                <!-- search -->
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Search startups..." aria-label="Search startups">
+                </div>
+
+                <!-- sector buttons -->
+                <div class="sector-filters" id="sector-filters">
+                    <button class="filter-btn active" data-sector="All">All</button>
+                    <button class="filter-btn" data-sector="Fintech">Fintech</button>
+                    <button class="filter-btn" data-sector="Edtech">Edtech</button>
+                    <button class="filter-btn" data-sector="Healthtech">Healthtech</button>
+                    <button class="filter-btn" data-sector="Logistics">Logistics</button>
+                    <button class="filter-btn" data-sector="Agritech">Agritech</button>
+                </div>
+
+            </div>
+
+            <!-- results count -->
+            <p class="results-count" id="results-count">Showing 18 startups</p>
+        </section>
+
+        <!-- ======= DIRECTORY GRID ======= -->
+        <section class="directory-section">
+            <div class="directory-grid" id="directory-grid">
+                <!-- JS renders cards here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======= FOOTER ======= -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo_container">
+                    <img src="images/naijastacklogo .webp" alt="NaijaStack logo">
+                    <h2>NaijaStack</h2>
+                </div>
+                <p class="footer-tagline">Powering Africa's Tech Future</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Sectors</h4>
+                <ul>
+                    <li><a href="directory.html?sector=Fintech">Fintech</a></li>
+                    <li><a href="directory.html?sector=Edtech">Edtech</a></li>
+                    <li><a href="directory.html?sector=Healthtech">Healthtech</a></li>
+                    <li><a href="directory.html?sector=Logistics">Logistics</a></li>
+                    <li><a href="directory.html?sector=Agritech">Agritech</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i> Video Demo
+                        </a>
+                    </li>
+                    <li><a href="about.html">Contact Us</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> NaijaStack. All rights reserved.</p>
+            <p>Built with <i class="fa-solid fa-heart" style="color: var(--primary-accent);"></i> in Lagos, Nigeria</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

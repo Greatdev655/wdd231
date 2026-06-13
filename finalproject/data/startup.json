@@ -48,7 +48,7 @@
         "employees": "5000+",
         "description": "OPay is a mobile money platform offering payments, transfers, savings, and lending services across Nigeria.",
         "website": "https://opayweb.com",
-        "logo": "./images/opay.webp",
+        "logo": "./images/opay_logo.webp",
         "featured": false
     },
     {
@@ -61,7 +61,7 @@
         "employees": "1500+",
         "description": "Moniepoint provides digital financial services for businesses, including payments, banking, credit, and business management tools.",
         "website": "https://moniepoint.com",
-        "logo": "./images/moniepoint.webp",
+        "logo": "./images/moniepoint_logo.webp",
         "featured": false
     },
     {
@@ -74,7 +74,7 @@
         "employees": "500+",
         "description": "Kuda is a digital-only bank offering free transfers, savings, budgeting tools, and overdrafts with no monthly fees.",
         "website": "https://kuda.com",
-        "logo": "images/logos/kuda.webp",
+        "logo": "./images/kuda_logo.webp",
         "featured": false
     },
     {
@@ -87,7 +87,7 @@
         "employees": "200+",
         "description": "uLesson delivers curriculum-relevant educational content to African students via smartphones, working even with limited internet.",
         "website": "https://ulesson.com",
-        "logo": "images/logos/ulesson.webp",
+        "logo": "./images/ulesson_logo.webp",
         "featured": false
     },
     {
@@ -100,7 +100,7 @@
         "employees": "100+",
         "description": "54gene is a genomics research company building Africa's largest biobank to accelerate drug discovery and diagnostics.",
         "website": "https://54gene.com",
-        "logo": "images/logos/54gene.webp",
+        "logo": "./images/54gene_logo.webp",
         "featured": false
     },
     {
@@ -113,7 +113,7 @@
         "employees": "150+",
         "description": "LifeBank is a medical distribution company that uses data and technology to find and deliver lifesaving medical products across Africa.",
         "website": "https://lifebank.ng",
-        "logo": "images/logos/lifebank.webp",
+        "logo": "./images/lifebank_logo.webp",
         "featured": false
     },
     {
@@ -126,7 +126,7 @@
         "employees": "300+",
         "description": "Kobo360 is a digital logistics platform connecting cargo owners with truck owners to streamline freight movement across Africa.",
         "website": "https://kobo360.com",
-        "logo": "images/logos/kobo360.webp",
+        "logo": "./images/kobo_logo.webp",
         "featured": false
     },
     {
@@ -139,7 +139,7 @@
         "employees": "1000+",
         "description": "MAX is a mobility and logistics startup using motorcycles and electric vehicles to move people and goods efficiently across African cities.",
         "website": "https://max.ng",
-        "logo": "images/logos/max.webp",
+        "logo": "./images/max_logo.webp",
         "featured": false
     },
     {
@@ -152,7 +152,7 @@
         "employees": "100+",
         "description": "Farmcrowdy is a digital agriculture platform that connects smallholder farmers with sponsors and markets to boost food production.",
         "website": "https://farmcrowdy.com",
-        "logo": "images/logos/farmcrowdy.webp",
+        "logo": "./images/farmcrowdy_logo.webp",
         "featured": false
     },
     {
@@ -165,7 +165,7 @@
         "employees": "80+",
         "description": "ThriveAgric provides smallholder farmers with access to finance, farm inputs, and guaranteed markets through a tech-enabled platform.",
         "website": "https://thriveagric.com",
-        "logo": "images/logos/thriveagric.webp",
+        "logo": "./images/thriveagric_logo.webp",
         "featured": false
     },
     {
@@ -178,7 +178,7 @@
         "employees": "400+",
         "description": "Paga is a mobile payment platform that enables people to send money, pay bills, and perform transactions via mobile and agent networks.",
         "website": "https://mypaga.com",
-        "logo": "images/logos/paga.webp",
+        "logo": "./images/paga_logo.webp",
         "featured": false
     },
     {
@@ -191,7 +191,7 @@
         "employees": "60+",
         "description": "Releaf builds technology and infrastructure to make African crop processing more efficient, starting with palm oil in Nigeria.",
         "website": "https://releaf.co",
-        "logo": "images/logos/releaf.webp",
+        "logo": "./images/releaf_logo.webp",
         "featured": false
     },
     {
@@ -204,7 +204,7 @@
         "employees": "200+",
         "description": "Helium Health provides an electronic medical records and hospital management platform for healthcare providers across Africa.",
         "website": "https://heliumhealth.com",
-        "logo": "images/logos/heliumhealth.webp",
+        "logo": "./images/helium_logo.webp",
         "featured": false
     },
     {
@@ -217,7 +217,7 @@
         "employees": "80+",
         "description": "CowryWise is a savings and investment platform that helps Nigerians build wealth through automated savings plans and mutual funds.",
         "website": "https://cowrywise.com",
-        "logo": "images/logos/cowrywise.webp",
+        "logo": "./images/cowrywise_logo.webp",
         "featured": false
     },
     {
@@ -230,7 +230,7 @@
         "employees": "200+",
         "description": "Gokada is a last-mile logistics and delivery platform operating across Lagos, helping businesses fulfill orders quickly and affordably.",
         "website": "https://gokada.ng",
-        "logo": "images/logos/gokada.webp",
+        "logo": "./images/gokada_logo.webp",
         "featured": false
     }
 ]
